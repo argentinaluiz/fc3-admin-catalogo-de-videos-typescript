@@ -24,6 +24,8 @@ services:
     #   - ./.docker/mysql:/docker-entrypoint-initdb.d
     tmpfs:
       - /var/lib/mysql
+    ports:
+      - 3306:3306
     security_opt:
       - seccomp:unconfined
   

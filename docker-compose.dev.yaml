@@ -18,11 +18,14 @@ services:
 
   db:
     image: mysql:8.0.30-debian
+    command: --default-authentication-plugin=mysql_native_password --server-id=1 --log-bin=mysql-bin
     environment:
       - MYSQL_DATABASE=micro_videos
       - MYSQL_ROOT_PASSWORD=root
     volumes:
       - ./.docker/dbdata:/var/lib/mysql:delegated
+    ports:
+      - 3306:3306
     security_opt:
       - seccomp:unconfined
   

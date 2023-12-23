@@ -39,6 +39,23 @@ Content-Type: application/json
 
 @genreId = {{createGenre.response.body.data.id}}
 
+
+###
+
+PATCH http://localhost:3000/genres/{{genreId}}
+Content-Type: application/json
+
+{
+    "name": "Genre 1aaaa",
+    "categories_id": [
+        "{{categoryId}}"
+    ]
+}
+
+###
+
+DELETE http://localhost:3000/genres/{{genreId}}
+
 ###
 
 # @name createCastMember
@@ -160,7 +177,7 @@ Content-Type: application/json
 
 ###
 
-@jwtToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiYWRtaW4tY2F0YWxvZyJdfSwiaWF0IjoxNzAyNTU2NzU5LCJleHAiOjE3MDI2NDMxNTl9.VwEHk-2ZkgveV-Ghp_X3NiwEysda-pkWArYueaKqkB_SljIVjmP2jgVr28fdVyc0dTTYlkmUimKKFI2_ce3n2Xnb6AXVr2xcEibUbdgL71WYw27P8jZ-Y6V2cvIJnZqFeDD4rtzkrqXOqyzr5EImYURdDG3r7_R6BLpfyz4CGNIK9wYVfTXT85EzFl_noMdCGQxUZSojHKIWivxd9xWQGTckYOivJODM5xpDPUAuJm3r2bAcCfNA8JWDyZs3zZtDVgzMeLCFrq3VOOe6FnkuaDULj7_adO6EJ43lYHQxHXY2tcGO4_wxX0fJ9tuTtrYBpz2FCISN8tc5EaDNLIZnhg
+@jwtToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiYWRtaW4tY2F0YWxvZyJdfSwiaWF0IjoxNzAzMjQ4MTU2LCJleHAiOjE3MDMzMzQ1NTZ9.bmffw1hJmonJhuVkYJeNmvMLNLd9A2nNjVlVBrb2LyAmFE9_XVXni5d5zNy5WTMEPqO-U9dpaayeXgeABXwmk3nR7cT2wF5AFT8nz5x8x6MXp2f7-NXWpuYUvmDGVpH1kWQN5MQcuR5EjlIhdlNT8jlYX_oMcAKuJkJ3C7J7ETQD4RrfwoenxT9SJhgUQ_A21YGNF0Jt-ySP5HW9jIf8Hxp8amZN2wmrGFlxDsLVw4vSLJz0BiCfGJaGcIlV7c2lP58f9SjULaxecsHP8ORpGS4Bmlgzz9PLpVsEUR2bPPpMrV7rx7wxhmhUqMQdBobOhGeJr8cmTd6qiejv7tPdJg
 
 ###
 GET http://localhost:3000/auth
